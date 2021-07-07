@@ -1,34 +1,39 @@
 ---
 experiment:
   pipeline: Pooled Cell Painting
-  project_tag: Periscope
+  project_tag: 2018_11_20_Periscope_Calico
   batches:
-    - BATCH_ID
+    - 20200805_A549_WG_Screen
   plates:
-    - PLATE01
-    - PLATE02
+    - CP186A
+    - CP186B
+    - CP186C 
+    - CP186D
+    - CP186E
+    - CP186F
+    - CP186G
+    - CP186H
+    - CP186N
   wells:
-    set1:
-      - Well1
-      - Well2
-      - Well3
-    set2:
-      - Well4
-      - Well5
-      - Well6
+    - Well1
+    - Well2
+    - Well3
+    - Well4
+    - Well5
+    - Well6
   split:
     qc:
-      batches: true
-      plates: true
-      wells: true
-    profile:
-      batches: true
+      batches: false
       plates: false
-      wells: true
-  barcoding_cycles: 10
+      wells: false
+    profile:
+      batches: false
+      plates: false
+      wells: false
+  barcoding_cycles: 12
   sites_per_image_grid_side: 10
   control_barcode_ids:
-    - NT
+    - nontargeting
 ---
 directory_structure:
   input_data_dir: /Users/gway/work/projects/2018_11_20_Periscope_Calico/workspace/analysis
