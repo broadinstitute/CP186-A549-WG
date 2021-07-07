@@ -84,9 +84,9 @@ preprocess:
     correlation_threshold: .2
     painting_image_names:
       - ConA
-      - Hoechst
+      - DAPI
       - Mito
-      - SYTO
+      - Phalloidin
       - WGA
     barcoding_prefix: CorrCycle
 ---
