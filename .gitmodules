@@ -1,0 +1,3 @@
+[submodule "recipe"]
+	path = recipe
+	url = https://github.com/broadinstitute/pooled-cell-painting-profiling-recipe.git
