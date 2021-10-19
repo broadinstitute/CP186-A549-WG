@@ -15,12 +15,13 @@ experiment:
     - CP186H
     - CP186N
   wells:
-    - Well1
-    - Well2
-    - Well3
-    - Well4
-    - Well5
-    - Well6
+    setallwells:
+      - Well1
+      - Well2
+      - Well3
+      - Well4
+      - Well5
+      - Well6
   split:
     qc:
       batches: false
@@ -36,7 +37,7 @@ experiment:
     - nontargeting
 ---
 directory_structure:
-  input_data_dir: /Users/gway/work/projects/2018_11_20_Periscope_Calico/workspace/analysis
+  input_data_dir: /home/ubunut/bucket/projects/2018_11_20_Periscope_Calico/workspace/analysis/
   batch_id_folder: true
   output_data_dir: data/
   preprocess:
