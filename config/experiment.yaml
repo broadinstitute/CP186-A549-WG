@@ -29,7 +29,7 @@ experiment:
       wells: false
     profile:
       batches: false
-      plates: false
+      plates: true
       wells: false
   barcoding_cycles: 12
   sites_per_image_grid_side: 10

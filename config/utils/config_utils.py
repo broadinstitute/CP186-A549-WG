@@ -252,7 +252,7 @@ def process_configuration(
             f"{batch_id}_{feature_select_level}_normalized_feature_select.csv.gz",
         )
 
-    return file_info
+    return file_info, incomplete_sites, errored_sites
 
 
 def get_batches(config=experiment_config_default):

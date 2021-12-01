@@ -29,7 +29,7 @@ core:
 ---
 preprocess:
   prefilter:
-    perform: true
+    perform: false
     force_overwrite: true
     flag_cols:
       - Barcode
@@ -37,7 +37,7 @@ preprocess:
       - Count
       - Resize
   process-spots:
-    perform: true
+    perform: false
     force_overwrite: true
     allowed_skips: 10
     image_cols:
@@ -59,7 +59,7 @@ preprocess:
       - Barcode_MatchedTo_ID
     exact_match_reads_col: "exact_match_reads_per_cell"
   process-cells:
-    perform: true
+    perform: false
     force_overwrite: true
     sort_col: Metadata_Cells_ObjectNumber
     merge_columns:
@@ -77,10 +77,10 @@ preprocess:
         - Metadata_Cells_ObjectNumber
     foci_site_col: Metadata_Foci_site
   summarize-cells:
-    perform: true
+    perform: false
     force_overwrite: true
   summarize-plate:
-    perform: true
+    perform: false
     force_overwrite: true
     correlation_threshold: .2
     painting_image_names:
@@ -93,12 +93,13 @@ preprocess:
 ---
 profile:
   single_cell:
-    perform: true
-    force_overwrite: true
+    perform: false
+    force_overwrite: false
     prefilter_features: true
-    output_one_single_cell_file_only: true
+    output_one_single_cell_file_only: false
     cell_quality_column: Metadata_Foci_Cell_Quality
     sanitize_gene_col: true
+    allowed_skips: 10
     merge_columns:
       image_column: ImageNumber
       linking_compartment: Cytoplasm
@@ -126,7 +127,6 @@ profile:
     levels:
       - gene
       - guide
-      - single_cell
     by_samples: all
     features: infer
   feature_select:
@@ -141,7 +141,6 @@ profile:
     levels:
       - gene
       - guide
-      - single_cell
     use_samples: all
     features: infer
     na_cutoff: 0
